@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Received - NSCA Foundation</title>
+    <style>
+        :root {
+            --primary-blue: #1a2a4a;
+            --success-green: #27ae60;
+            --bg-gray: #f1f3f5;
+            --panel-bg: #ffffff;
+            --border-color: #dce1e5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 4px;
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .nsca-container {
+            width: 1001px;
+            margin-top: 30px;
+        }
+
+        .logo-panel {
+            text-align: center;
+            height: 167px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-panel img {
+            width: 1000.99px;
+            height: auto;
+        }
+
+        .nsca-panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--success-green);
+            border-radius: var(--radius);
+            padding: 60px 40px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            animation: fadeInDown 0.6s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .success-icon {
+            font-size: 64px;
+            color: var(--success-green);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-blue);
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .message {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        .next-steps {
+            background-color: #f8fbff;
+            border-radius: var(--radius);
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: left;
+            border: 1px solid #e1f0fa;
+        }
+
+        .next-steps h2 {
+            font-size: 18px;
+            color: var(--primary-blue);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .next-steps p {
+            font-size: 15px;
+            color: #555;
+            margin: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 14px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(26, 42, 74, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #244070;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(26, 42, 74, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="nsca-container">
+        <div class="logo-panel">
+            <img src="스크린샷 2026-03-11 013713.png" alt="NSCA Foundation Logo">
+        </div>
+
+        <div class="nsca-panel">
+            <div class="success-icon">✅</div>
+            <h1>Application Received Successfully</h1>
+            <div class="message">
+                Thank you for your interest in joining the NSCA Foundation. Your application for the Assistant position has been successfully recorded in our scholarship management system.
+            </div>
+
+            <div class="next-steps">
+                <h2>What happens next?</h2>
+                <p> Our selection committee will carefully review your submitted documentation and statement of purpose. <strong>You will receive an official notification regarding your application status via email within 5 to 7 business days.</strong></p>
+            </div>
+
+            <a href="index.html" class="btn">Return to Portal Home</a>
+        </div>
+    </div>
+</body>
+</html>

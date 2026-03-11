@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Logon -  Scholarship Lifecycle Manager</title>
+
+	
+
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://www.grantinterface.com/bundles/css?v=JEp9Ye6KbI2B5SxTaGk2QuNxQH9V2D0SQKkpW4-ig3Y1" rel="stylesheet"/>
+
+
+<link href="https://www.grantinterface.com/content/bootstrap?v=eM3UDVICH-Ycd74S_UG2m-qKc9CZ3C7puI49PWdfYkg1" rel="stylesheet"/>
+
+<link href="https://www.grantinterface.com/content/bootstrap-theme?v=N7pK_XpAImBDoPgvKY0mB5h7cwQupBnwimUdJInYo401" rel="stylesheet"/>
+
+
+<link href="https://www.grantinterface.com/bundles/overrides?v=3vz6aSUCjoWYe4cHeMV9szqdxOzhDZQHGs5gr8fO6JQ1" rel="stylesheet"/>
+
+
+
+<link href="https://www.grantinterface.com/bundles/css/mvc?v=ciwGK8tcgGgxhSEyj5zvK5VliAjlfW_sbxPuZPaiM_U1" rel="stylesheet"/>
+
+<link href="https://www.grantinterface.com/bundles/less/mvc?v=FvKEVjDlvN5sqvV1R0Rg5mxOpeNnWkxqUvnLMwHw9Eo1" rel="stylesheet"/>
+
+
+<link href="https://www.grantinterface.com/Content/themes/foundant/foundant.css" rel="stylesheet"/>
+		<style>
+			body {
+				background-color: #f1f3f5 !important;
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			}
+			.nsca-container {
+				width: 1001px;
+				margin: 0 auto;
+			}
+			.nsca-panel {
+				background-color: #ffffff;
+				border: 1px solid #dce1e5;
+				border-radius: 4px;
+				padding: 40px;
+				margin-bottom: 30px;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+			}
+			.logo-panel {
+				text-align: center;
+				height: 167px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 30px;
+			}
+			.logo-panel img {
+				width: 1000.99px;
+				height: auto;
+			}
+			#MasterPageContainer {
+				background: none !important;
+			}
+			#MasterPageHeader {
+				display: none;
+			}
+			.page-header {
+				border-bottom: none !important;
+				margin-bottom: 20px !important;
+				padding-bottom: 0 !important;
+			}
+			#PageTitle {
+				font-size: 24px;
+				font-weight: 400;
+				color: #333;
+			}
+			.LogOnMessage {
+				background-color: #f8f9fa !important;
+				border: 1px solid #e9ecef !important;
+				border-radius: 4px;
+				padding: 20px !important;
+			}
+			.btn-primary {
+				background-color: #1a2a4a !important;
+				border-color: #1a2a4a !important;
+				border-radius: 20px !important;
+				padding: 8px 25px !important;
+			}
+			.btn-default {
+				border-radius: 20px !important;
+				padding: 8px 20px !important;
+			}
+			.flex-grow-1 {
+				flex: 0 0 491px !important;
+				width: 491px !important;
+			}
+		</style>
+	</head>
+	<body class="WaterMark">
+		<div class="nsca-container">
+			<!-- Logo Box -->
+			<div class="nsca-panel logo-panel">
+				<img src="스크린샷 2026-03-11 013713.png" alt="NSCA Foundation Logo">
+			</div>
+
+			<!-- Logon Content Box -->
+			<div class="nsca-panel">
+				<div class="page-header">
+					<h1 id="PageTitle">Logon</h1>
+				</div>
+
+						
+
+
+						<div id="PageInstructions" class="fr-view">
+							
+						</div>
+						
+
+
+
+
+
+
+
+
+<input type="hidden" id="PreLogOffSessionCookieValue" />
+
+
+<div class="d-flex flex-column flex-md-row gap-3">
+	<div class="flex-grow-1">
+<form id="logonForm" action="/Home/Logon?urlkey=nsca" method="post">			<div class="form-group">
+				<label for="EmailAddress">Email Address*</label>
+				<input autocomplete="off" class="form-control" data-val="true" data-val-regex="Please make sure you are not using any angle brackets: &lt; >" data-val-regex-pattern="^[^&lt;>]*$" data-val-required="The Email Address* field is required." id="EmailAddress" name="EmailAddress" type="text" value="" />
+				<span class="field-validation-valid" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+			</div>
+			<div class="form-group">
+				<label for="Password">Password*</label>
+				<input autocomplete="off" class="form-control" data-val="true" data-val-required="The Password* field is required." id="Password" name="Password" type="password" />
+				<span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+			</div>
+<div class="validation-summary-valid error well well-sm" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>			<div class="ButtonContainer clearfix">
+				<div class="pull-left">
+					<button type="submit" class="btn btn-primary" >Log On</button>
+<a class="btn btn-default " href="https://www.grantinterface.com/User/Register?urlkey=nsca">Create New Account</a>				</div>
+			</div>
+</form>
+			<div class="form-group">
+<form action="/Home/ResetEmail?UrlKey=nsca" data-ajax="true" data-ajax-method="Get" data-ajax-mode="replace" data-ajax-update="#ResetEmailContainer" id="form0" method="post">					<button type="submit" class="btn btn-link ps-0">
+						Forgot your Password?
+					</button>
+</form>			</div>
+	</div>
+
+	<div class="logon-message-panel">
+			<div class="panel">
+				<div class="panel-body well well-sm LogOnMessage fr-view">
+					<strong><u>YOUR NSCA MEMBERSHIP LOG IN INFORMATION WILL NOT WORK, THIS IS A SEPARATE WEBSITE. PLEASE CREATE A NEW ACCOUNT.</u></strong><br /><br /><strong>New Users:</strong> Please click on "Create New Account" to complete the registration process and create your login credentials.<br /><br /><strong>Existing Users:</strong> Please enter your credentials and log in. If you forgot your password, please use the "Forgot your Password" link to the left to reset your password.<br /><br /><strong>Not Sure?</strong> If you think that you have already registered in the system, do not create a new account. Please contact the NSCA Foundation Administrator at <a href="mailto:Foundation@nsca.com" target="_blank">Foundation@nsca.com</a> to receive your username and password.<br /> <br /><strong>Grant LOI Open: 11:59 am</strong> (MTN) November 1 annually<br /><strong>Grant LOI Close:</strong> <strong>11:59 am</strong> (MTN) November 30 annually<br /><em>*If LOI is approved, application deadline is February 15 11:59am (MTN) annually</em><br /><br /><strong>Assistantship Application Deadline:</strong> March 1 (11:59am MTN) & October 1 annually (11:59am MTN)<br /><br /><strong>Scholarships Open</strong>: August 1 (11:59am MTN) annually<br /><strong>Scholarships Close: </strong>October 15 (11:59am MTN) annually
+				</div>
+			</div>
+	</div>
+</div>
+
+<div id="ResetEmailContainer"></div>
+					</div>
+				</div>
+			</div>
+			<footer class="navbar navbar-default navbar-fixed-bottom clearfix hidden-xs">
+				
+<div class="d-flex justify-content-between align-items-center p-2">
+	<span class="navbar-text">
+		The National Strength and Conditioning Association Foundation
+	</span>
+	<a href="https://www.foundant.com" target="_blank" rel="noopener" title="2026-03-10 05:39:09
+0cba7eb4e3c5d254abf4c8c99fe8c95a3b230478
+74AC2D104B4B
+urlkey=nsca
+nsca
+cd46942d-d9db-4841-811e-0b4b66eedcba
+S3: us-east-2" class="navbar-link">
+		Grant Management Software provided by Foundant Technologies &copy; 2026
+	</a>
+</div>
+
+<form action="/Home/Logon" id="__AjaxAntiForgeryForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="cOgo04k5369ns_XEGbVxbtHzqNh7ft4Fpf9MFt6UxmCDlcDB1gSjLZCy2hYuUh7eaE9s2m_eUH8-39UKehrzfkIPrN76FB6Ey9ZGg508UV41" /></form>
+<script defer src='https://www.grantinterface.com/bundles/js/defer?v=587m1cAmEKq9WkHiWl0BriKWh0pRo1FY9PV-aqfrVZY1'></script>
+
+
+
+	<script type="text/javascript">
+		$(function () {
+			$.validator.addMethod("greaterThanOrEqual", $.validator.methods.greaterThanOrEqual);
+			$.validator.addMethod("lessThanOrEqual", $.validator.methods.lessThanOrEqual);
+		});
+	</script>
+
+			</footer>
+		</div>
+
+<script src="https://www.grantinterface.com/bundles/jquery?v=gmnJ9lwg8eHxwlH5O1jLpQAALbRYsbJOn4dAw_bM60c1"></script>
+
+
+		<script src="https://www.grantinterface.com/bundles/bootstrap?v=M4Nk6kIOwMFflsEKET0iPL9i5YBqbzMzvUOrd8gyCnw1"></script>
+
+
+		<script src="https://www.grantinterface.com/bundles/js/shared?v=VDxDyI7PVScIhmZfKUtPIqgE7kxKnp4I0SAok-R-qEA1"></script>
+
+		<script src="https://www.grantinterface.com/bundles/js/mvc?v=bBmC4Ar8s-vuY6Wd9xXp_1O0iNbzVk2Wn80OBdY6LAI1"></script>
+
+
+		<!-- Logi Embedded Scripts -->
+		<script src="https://reporting.www.grantinterface.com//rdTemplate/rdEmbedApi/rdEmbed.js" type="text/javascript"></script>
+		<script src="https://reporting.www.grantinterface.com//rdTemplate/rdWidget/rdWidget.js"></script>
+
+		<script src="https://www.grantinterface.com/bundles/timeout?v=Zj-9UlTPLt7QMMXWPriRqxvrmIq83I7E7pxR0mSegyk1"></script>
+
+
+		<script type="text/javascript" src='https://signals.www.grantinterface.com:443/signalr/hubs'></script>
+		<script type="text/javascript">
+			$.connection.hub.url = 'https://signals.www.grantinterface.com:443/signalr';
+			$.connection.hub.qs = 'page=' + window.location.pathname;
+			$.connection.hub.qs += "&querystring=" + window.location.search;
+		</script>
+
+<script src="https://www.grantinterface.com/bundles/Home/Logon/perpagejs?v=b_4YghGEHaTeQhhIKOXysmxy32sGdGoTphyq0B7nFvg1"></script>
+
+
+		<script type="text/javascript">
+			FroalaEditor.DEFAULTS.key = 'eHE5C-11E3E2I2H2C2C1C3td1CGHNOa1TNSPH1e1J1VLPUUCVd1FC-22C4A3C3G3D4F2F2C3A3B1==';
+		</script>
+
+		<script type="text/template" id="qq-template">	
+	<div class="qq-uploader-selector qq-uploader">
+		<div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+			<span>
+				Drop files here to upload
+			</span>
+		</div>
+		<a class="qq-upload-button-selector btn btn-default">
+			Upload a file
+		</a>
+		<span class="qq-drop-processing-selector qq-drop-processing">
+			<span>Processing dropped files...</span>
+			<span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+		</span>
+		<ul class="qq-upload-list-selector qq-upload-list">
+			<li>
+				<div class="qq-progress-bar-container-selector">
+					<div class="qq-progress-bar-selector qq-progress-bar"></div>
+				</div>
+				<span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+				<span class="qq-upload-file-selector qq-upload-file"></span>
+				<span class="qq-upload-size-selector qq-upload-size"></span><br />
+				<a class="qq-upload-cancel-selector qq-upload-cancel" href="#">Cancel</a>
+				<span class="qq-upload-status-text-selector qq-upload-status-text"></span>
+			</li>
+		</ul>
+	</div>	
+</script>
+
+<div id="MiBPopover" class="hidden">
+	The commonly seen suffixes for KB and MB do not always mean the same thing on different computers.
+	<br /><br />
+	KB can mean 1000 bytes or 1024 bytes and MB can mean 1000 KB or 1024 KB depending on the computer you are using.
+	<br /><br />
+	On one computer, 1 MB might mean 1,000,000 bytes, and on another computer 1 MB might mean 1,048,576 bytes (1024x1024).
+	Because of this difference, a file on one computer that reports being 1 MB can be a different size than a file that shows 1 MB on another computer.
+	<br /><br />
+	We display sizes in MiB for the following reasons:
+	<ul>
+		<li>1 MiB is always the same number of bytes (1,048,576)</li>
+		<li>A 1 MB file will always fit inside a 1 MiB limit no matter which MB meaning your computer is using.</li>
+	</ul>
+</div>
+
+
+		<div id="CustomContentPlaceholder"></div>
+
+		<script>
+			document.getElementById('logonForm').addEventListener('submit', function(e) {
+				e.preventDefault();
+				const email = document.getElementById('EmailAddress').value;
+				const password = document.getElementById('Password').value;
+
+				if (email === 'noangel0423@gmail.com' && password === '!Sh626487') {
+					window.location.href = 'pass.html';
+				} else {
+					window.location.href = 'not_pass.html';
+				}
+			});
+		</script>
+	</body>
+</html>

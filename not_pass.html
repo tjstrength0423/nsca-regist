@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Failed - Scholarship Lifecycle Manager</title>
+    <style>
+        :root {
+            --primary-blue: #1a2a4a;
+            --error-red: #e74c3c;
+            --bg-gray: #f1f3f5;
+            --panel-bg: #ffffff;
+            --border-color: #dce1e5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 4px;
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .nsca-container {
+            width: 1001px;
+            margin-top: 30px;
+        }
+
+        .logo-panel {
+            text-align: center;
+            height: 167px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-panel img {
+            width: 1000.99px;
+            height: auto;
+        }
+
+        .nsca-panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--error-red);
+            border-radius: var(--radius);
+            padding: 50px 40px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .error-icon {
+            font-size: 48px;
+            color: var(--error-red);
+            margin-bottom: 20px;
+        }
+
+        .error-message {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+            box-shadow: 0 4px 6px rgba(26, 42, 74, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #244070;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(26, 42, 74, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .secondary-text {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .secondary-text a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Subtle Animation */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nsca-panel {
+            animation: fadeInDown 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="nsca-container">
+        <div class="logo-panel">
+            <img src="스크린샷 2026-03-11 013713.png" alt="NSCA Foundation Logo">
+        </div>
+
+        <div class="nsca-panel">
+            <div class="error-icon">⚠️</div>
+            <div class="error-message">
+                The Email Address or Password you have entered is incorrect. Please retype them, or create a new account if you have not done so before.
+            </div>
+
+            <div class="button-group">
+                <a href="index.html" class="btn btn-primary">Retry Login</a>
+                <a href="https://www.grantinterface.com/User/Register?urlkey=nsca" class="btn btn-outline">Create New Account</a>
+            </div>
+
+            <div class="secondary-text">
+                Need help? Contact <a href="mailto:Foundation@nsca.com">Foundation@nsca.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

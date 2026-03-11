@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistant Application Portal - NSCA Foundation</title>
+    <style>
+        :root {
+            --primary-blue: #1a2a4a;
+            --secondary-blue: #2c3e50;
+            --success-green: #27ae60;
+            --bg-gray: #f1f3f5;
+            --panel-bg: #ffffff;
+            --border-color: #dce1e5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 4px;
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        .nsca-container {
+            width: 1001px;
+            margin-top: 30px;
+        }
+
+        .logo-panel {
+            text-align: center;
+            height: 167px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-panel img {
+            width: 1000.99px;
+            height: auto;
+        }
+
+        .nsca-panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-blue);
+            border-radius: var(--radius);
+            padding: 60px;
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 32px;
+            color: var(--primary-blue);
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .portal-intro {
+            background: linear-gradient(to right, #f8fbff, #ffffff);
+            padding: 30px;
+            border-radius: var(--radius);
+            border-left: 5px solid var(--primary-blue);
+            margin-bottom: 45px;
+        }
+
+        .portal-intro h2 {
+            font-size: 18px;
+            color: var(--primary-blue);
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .instructions-text {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .instructions-text ol {
+            margin: 15px 0 0 25px;
+            padding: 0;
+        }
+
+        .instructions-text li {
+            margin-bottom: 12px;
+        }
+
+        .form-section {
+            margin-top: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 35px;
+        }
+
+        label {
+            display: block;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--secondary-blue);
+            margin-bottom: 12px;
+        }
+
+        .field-hint {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            font-size: 15px;
+            font-family: inherit;
+            box-sizing: border-box;
+            transition: all 0.2s;
+            background-color: #fafafa;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(26, 42, 74, 0.08);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 180px;
+            line-height: 1.6;
+        }
+
+        .file-drop-zone {
+            position: relative;
+            background-color: #fcfcfc;
+            border: 2px dashed #ccd3d9;
+            padding: 35px;
+            text-align: center;
+            border-radius: var(--radius);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .file-drop-zone:hover {
+            border-color: var(--primary-blue);
+            background-color: #f8fbff;
+        }
+
+        .file-drop-zone input[type="file"] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .upload-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .upload-text {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .upload-text b {
+            color: var(--primary-blue);
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 17px;
+            font-weight: 700;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 50px;
+            box-shadow: 0 6px 15px rgba(26, 42, 74, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-submit:hover {
+            background-color: #244070;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(26, 42, 74, 0.3);
+        }
+
+        .footer-compliance {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .footer-compliance a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="nsca-container">
+        <div class="logo-panel">
+            <img src="스크린샷 2026-03-11 013713.png" alt="NSCA Foundation Official Logo">
+        </div>
+
+        <div class="nsca-panel">
+            <header class="page-header">
+                <h1>Assistant Application Portal</h1>
+                <p>Welcome back, <b>noangel0423@gmail.com</b>. Your session is active.</p>
+            </header>
+
+            <section class="portal-intro">
+                <h2>Submission Guidelines</h2>
+                <div class="instructions-text">
+                    Welcome to the NSCA Foundation application portal. To ensure your application is reviewed thoroughly by our selection committee, please upload highly professional and verified documentation in the following sections:
+                    <ol>
+                        <li><b>Certified Proof of Credentials:</b> Valid certification of Olympic Weightlifting Level 2 or higher from a recognized governing body.</li>
+                        <li><b>A Professional Statement of Purpose:</b> Provide a concise narrative (200–300 words) detailing your strategic vision for this role and why your professional background makes you the premier candidate.</li>
+                        <li><b>Executive Resume or Curriculum Vitae:</b> An up-to-date document showcasing your specialized experience and relevant career milestones.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <form action="received.html" method="GET" class="form-section">
+                <div class="form-group">
+                    <label>1. Olympic Weightlifting Level 2+ Certification*</label>
+                    <div class="field-hint">High-resolution scan preferred (PDF, PNG, or JPG formats).</div>
+                    <div class="file-drop-zone">
+                        <span class="upload-icon">📄</span>
+                        <div class="upload-text"><b>Click to upload</b> or drag and drop your certification file here</div>
+                        <input type="file" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>2. Statement of Purpose (200–300 words)*</label>
+                    <div class="field-hint">Articulate your passion and qualifications with professional clarity.</div>
+                    <textarea class="form-control" placeholder="Type or paste your professional statement of purpose here..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>3. Executive Resume or CV*</label>
+                    <div class="field-hint">Please ensure your document is updated with current contact information.</div>
+                    <div class="file-drop-zone">
+                        <span class="upload-icon">📁</span>
+                        <div class="upload-text"><b>Click to upload</b> or drag and drop your resume file here</div>
+                        <input type="file" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Official Application</button>
+            </form>
+
+            <footer class="footer-compliance">
+                Advanced Support? Contact the NSCA Foundation Administrative Office at <a href="mailto:Foundation@nsca.com">Foundation@nsca.com</a>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
